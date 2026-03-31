@@ -1,1 +1,1 @@
-{"aur": {"bang": "aur", "name": "ArchUserRepository", "link": "https://aur.archlinux.org/packages?O=0&SeB=nd&K={search}&outdated=&SB=p&SO=d&PP=50", "filler": "+", "category": ["linux", "code"]}}
+{"aur": {"bang": "aur", "name": "ArchUserRepository", "link": "https://aur.archlinux.org/packages?O=0&SeB=nd&K={search}&outdated=&SB=p&SO=d&PP=50", "filler": "+", "category": ["linux", "code", "repositories"]}}
