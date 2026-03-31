@@ -27,9 +27,10 @@
 # lnk=$( $object | jq '.link')
 
 fllr=$(cat bangs/* | jq -r ".$1.filler" | sed 's/null//g' | tr -d '\n' | xargs)
-echo "$fllr"
+# echo "$fllr"
 term="$2"
 srch=$(echo "$term" | sed "s~ ~$fllr~")
-echo "$srch"
+# t echo "$srch"
 lnk=$(cat bangs/* | jq -r ".$1.link" | sed 's/null//g' | sed "s~{search}~$srch~g")
-echo "$lnk"
+cat bangs/* | jq -r ".$1.name" | sed 's/null//g' | tr -d '\n' | xargs
+echo "$lnk" | tr -d '\n' | xargs
