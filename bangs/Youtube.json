@@ -1,0 +1,12 @@
+{
+  "yt": {
+    "bang": "yt",
+    "name": "Youtube",
+    "link": "https://www.youtube.com/results?search_query={search}",
+    "filler": "+",
+    "category": [
+      "video",
+      "entertainment"
+    ]
+  }
+}

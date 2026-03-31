@@ -1,0 +1,13 @@
+{
+  "w": {
+    "bang": "w",
+    "name": "Wikipedia",
+    "link": "https://en.wikipedia.org/wiki/{search}",
+    "filler": "_",
+    "category": [
+      "wiki",
+      "doc",
+      "test"	
+    ]
+  }
+}
