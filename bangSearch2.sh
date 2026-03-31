@@ -34,3 +34,4 @@ srch=$(echo "$term" | sed "s~ ~$fllr~")
 lnk=$(cat bangs/* | jq -r ".$1.link" | sed 's/null//g' | sed "s~{search}~$srch~g")
 cat bangs/* | jq -r ".$1.name" | sed 's/null//g' | tr -d '\n' | xargs
 echo "$lnk" | tr -d '\n' | xargs
+open $lnk
