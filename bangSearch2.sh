@@ -26,13 +26,15 @@
 
 # lnk=$( $object | jq '.link')
 
+dir="$HOME/Scripts/MarioSearch_SH/bangs/*"
+
 fllr=$(cat bangs/* | jq -r ".$1.filler" | sed 's/null//g' | tr -d '\n' | xargs)
 # echo "$fllr"
 term="$2"
 srch=$(echo "$term" | sed "s~ ~$fllr~g")
 # t echo "$srch"
-lnk=$(cat bangs/* | jq -r ".$1.link" | sed 's/null//g' | sed "s~{search}~$srch~g")
-cat bangs/* | jq -r ".$1.name" | sed 's/null//g' | tr -d '\n' | xargs
+lnk=$(cat $dir | jq -r ".$1.link" | sed 's/null//g' | sed "s~{search}~$srch~g")
+cat $dir | jq -r ".$1.name" | sed 's/null//g' | tr -d '\n' | xargs
 echo "$lnk" | tr -d '\n' | xargs
 
 open -u "$(echo "$lnk" | tr -d '\n' | xargs)"
